@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trauma Dental Virtual – Luxação e Avulsão</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+--bg:#eef7fd;--sf:#fff;--tx:#0b3a5b;--mu:#58778c;--ac:#88CDF6;--as:#BCE5FF;--bd:#d6eaf7;--pl:#2f5fd0;--bl:#d6455d;--btn:#0b3a5b;--btt:#fff;--sh:0 6px 24px rgba(11,58,91,.08);--hero:linear-gradient(135deg,#88CDF6,#BCE5FF)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1620;--sf:#13263a;--tx:#e6f4fd;--mu:#97b6ca;--bd:#25435b;--as:#1c3a52;--pl:#7aa0ff;--bl:#ff7b90;--btn:#88CDF6;--btt:#0b3a5b;--sh:none;--hero:linear-gradient(135deg,#1d4668,#15324a)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1620;--sf:#13263a;--tx:#e6f4fd;--mu:#97b6ca;--bd:#25435b;--as:#1c3a52;--pl:#7aa0ff;--bl:#ff7b90;--btn:#88CDF6;--btt:#0b3a5b;--sh:none;--hero:linear-gradient(135deg,#1d4668,#15324a)}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+.hero{background:var(--hero);padding:34px 20px 54px;text-align:center}
+.hero h1{font:400 clamp(30px,6vw,46px)/1.1 "DM Serif Display",Georgia,serif;margin:0}
+.hero p{margin:10px auto 0;max-width:600px;opacity:.8}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;max-width:760px;margin:-28px auto 18px;display:flex;gap:8px;padding:8px;background:var(--sf);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--sh)}
+.bar div{flex:1;text-align:center;border-radius:10px;padding:4px;background:var(--as);min-width:0}
+.bar b{display:block;font:400 17px/1.3 "DM Serif Display",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bar span{font-size:11px;color:var(--mu)}
+main{max-width:980px;margin:0 auto;padding:0 16px 32px}
+section{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:22px;margin:0 0 18px;box-shadow:var(--sh)}
+h2{font:400 22px/1.2 "DM Serif Display",Georgia,serif;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+h2 i{font:600 13px Inter,sans-serif;font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#0b3a5b;display:grid;place-items:center;flex:none}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+label{display:flex;flex-direction:column;font-size:12.5px;font-weight:500;color:var(--mu);gap:4px}
+input,select{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:9px 11px;width:100%;outline:0}
+input:focus,select:focus,button:focus-visible{border-color:var(--ac);box-shadow:0 0 0 3px var(--as);outline:0}
+.hint{font-size:13px;color:var(--mu);margin:2px 0 10px}
+.fm{margin-top:10px;background:var(--as);border-radius:14px;padding:12px 16px;font-size:14px}
+button{font:inherit;font-weight:600;background:var(--btn);color:var(--btt);border:0;border-radius:12px;padding:11px 20px;cursor:pointer}
+button:active{transform:scale(.97)}button.s{background:var(--as);color:var(--tx)}
+.k{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.kp{background:var(--as);border-radius:14px;padding:12px;text-align:center}
+.kp b{display:block;font:400 21px/1.25 "DM Serif Display",Georgia,serif}.kp span{font-size:12px;color:var(--mu)}
+[hidden]{display:none!important}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--bd);border-radius:18px;overflow:hidden;background:var(--bg)}
+.seg label{flex-direction:row;position:relative;padding:6px 14px;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--tx)}
+.seg input{position:absolute;opacity:0;width:0;height:0}
+.seg label:hover{background:var(--as)}.seg label:has(input:checked){background:var(--ac);color:#0b3a5b}
+.seg label:has(input:focus-visible){box-shadow:inset 0 0 0 2px var(--pl)}
+.seg label.y:has(input:checked){background:#ffc9d1;color:#7a1226}
+.q{display:flex;justify-content:space-between;align-items:center;gap:10px 16px;padding:9px 0;border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.q>span,.q>b{flex:1 1 260px;font-weight:500;font-size:14px}
+.sys{font:600 12.5px Inter,sans-serif;color:var(--pl);margin:18px 0 2px}
+.arch{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0}
+.arch button{width:44px;padding:8px 0;background:var(--bg);color:var(--tx);border:1px solid var(--bd);font-size:13px;border-radius:10px}
+.arch button.on{background:var(--pl);color:#fff;border-color:var(--pl)}
+.dx{font:400 24px/1.25 "DM Serif Display",Georgia,serif;margin:0 0 4px}
+.badge{display:inline-block;padding:4px 14px;border-radius:999px;font-weight:700;font-size:14px;color:#0b3a5b}
+.c0{background:#b6e8c6}.c1{background:#ffeaa6}.c2{background:#ffb3bd}
+.al{background:#ffd9de;color:#7a1226;border-radius:14px;padding:12px 16px;margin-bottom:12px;font-weight:500}
+.og h3{font:400 18px "DM Serif Display",Georgia,serif;margin:18px 0 4px}.og ul,.og ol{margin:0;padding-left:22px}.og li{margin:5px 0}
+.og.w h3{color:var(--bl)}
+.od{max-width:560px;margin:8px auto}.od svg{width:100%;height:auto;display:block}
+.od .tg{cursor:pointer}.od .tg circle{fill:var(--bg);stroke:var(--mu);stroke-width:1.2}.od .tg text{fill:var(--tx);font:600 11px Inter,sans-serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.od .tg.dc text{font-size:9.5px}.od .tg.dt circle{fill:var(--as)}.od .tg.l0 circle{fill:#b6e8c6}.od .tg.l1 circle{fill:#ffeaa6}.od .tg.l2 circle{fill:#ffb3bd}.od .tg.l0 text,.od .tg.l1 text,.od .tg.l2 text{fill:#0b3a5b}
+.od .tg.on circle,.od .tg:focus-visible circle{stroke:var(--pl);stroke-width:3.5}.od .tg:focus{outline:0}
+.od .ln{stroke:var(--bl);stroke-width:1;opacity:.6}.od .lb{fill:var(--mu);font:600 11px Inter,sans-serif;text-anchor:middle}
+.tb{overflow-x:auto;margin-top:12px}table{border-collapse:collapse;min-width:520px;width:100%;font-size:13px}td,th{border-bottom:1px solid var(--bd);padding:6px;text-align:left}th{background:var(--as)}
+@media print{body::before,.bar,button,.hero p{display:none!important}.hero{padding:10px;background:none}section{box-shadow:none;break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></head><body>
+<div class="hero"><h1>Trauma Dental Virtual</h1><p>Diagnóstico, conduta e prognóstico de luxações (concussão, subluxação, extrusiva, lateral e intrusiva) e avulsão, com base nas diretrizes da IADT.</p></div>
+<div class="bar"><div><b id="b1">–</b><span>Lesão</span></div><div><b id="b2">–</b><span>Dentes</span></div><div><b id="b3">–</b><span>Raiz</span></div><div><b id="b4">–</b><span>Prognóstico</span></div></div>
+<main>
+<section><h2><i>1</i>Identificação e trauma</h2><div class="g" id="idf"></div>
+</section>
+
+<section><h2><i>2</i>Anamnese do trauma</h2><div id="ana"></div></section>
+
+<section><h2><i>3</i>Odontograma</h2>
+<p class="hint">Toque em um dente para abrir a ficha dele; cada dente guarda os próprios achados. Anel externo: permanentes. Anel interno: decíduos. A cor mostra o prognóstico dos dentes já preenchidos.</p>
+<div class="od" id="od"></div>
+<p class="hint" style="text-align:center"><span class="badge c0">Favorável</span> <span class="badge c1">Reservado</span> <span class="badge c2">Desfavorável</span> Azul: ficha iniciada, sem diagnóstico.</p>
+<div class="tb" id="sumw" hidden><table id="sum"></table></div></section>
+
+<section><h2><i>4</i>Ficha endodôntica do dente <span id="at">(selecione no odontograma)</span></h2>
+<p class="hint">Logo após o trauma, os testes de sensibilidade podem dar falso-negativo. Registre-os como linha de base e repita em 3 semanas, 3, 6 e 12 meses e depois anualmente. Prefira neve de CO₂ ou diclorodifluorometano no terço médio da face vestibular.</p>
+<div id="exm"></div>
+<div id="mmw" class="q" hidden><b>Profundidade da intrusão (mm)</b><input id="mm" type="number" min="0" max="20" step="0.5" style="width:90px"></div></section>
+
+<section><h2><i>5</i>Diagnóstico</h2>
+<div class="q"><b>Tipo de lesão</b><div id="tipo"></div></div>
+<p style="margin:10px 0 0"><button class="s" id="sug" type="button">Sugerir diagnóstico a partir do exame</button> <span id="smsg" class="hint"></span></p></section>
+
+<section id="avs" hidden><h2><i>6</i>Dados da avulsão</h2><div id="avq"></div>
+<div class="g" style="margin-top:12px"><label>Tempo total fora do alvéolo (min)<input id="tt" type="number" min="0"></label><label>Tempo com o dente seco (min)<input id="ts" type="number" min="0"></label><label>Meio de armazenamento<select id="med"><option value="">Selecione</option><option>Nenhum (seco)</option><option>Saliva</option><option>Água</option><option>Leite</option><option>Soro fisiológico</option><option>Solução balanceada (HBSS)</option></select></label></div></section>
+
+<section><h2><i>✓</i>Resultados e orientações</h2>
+<div id="alert"></div><div class="k" id="kp"></div><div id="or"></div>
+<p class="hint">Ferramenta de apoio didático baseada em Hargreaves e Berman (Cohen, 2017) e nas diretrizes da IADT (2020). Doses, prazos e condutas devem ser confirmados pelo profissional ou professor responsável.</p>
+<button id="pdf" type="button">Gerar ficha em PDF</button> <span class="hint">Na janela de impressão, escolha “Salvar como PDF”.</span></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const PU=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28],PL=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38],DU=[55,54,53,52,51,61,62,63,64,65],DL=[85,84,83,82,81,71,72,73,74,75];
+const TIPOS=["Concussão","Subluxação","Luxação extrusiva","Luxação lateral","Luxação intrusiva","Avulsão"];
+const S={d:{},lv:{},act:null,cur:null};
+const seg=(n,o)=>`<div class="seg">${o.map(x=>`<label class="${x==="Sim"?"y":""}"><input type="radio" name="${n}" value="${x}">${x}</label>`).join("")}</div>`;
+const get=n=>{const e=document.querySelector(`input[name="${n}"]:checked`);return e?e.value:""};
+const SN=["Não","Sim"],SNS=["Não","Sim","Não sei"];
+const IDF=[["nome","Nome completo"],["pront","Nº do prontuário"],["idade","Idade (anos)","number"],["trauma","Data e hora do trauma","datetime-local"],["resp","Responsável"],["data","Data do atendimento","date"]];
+const ANA=[["mec","O trauma ocorreu com perda de consciência, vômito, dor de cabeça forte ou amnésia?",SN],["lac","Há laceração de lábio, gengiva ou outros tecidos moles?",SN],["tet","Vacina antitetânica em dia?",SNS],["alg","Alergia a penicilina ou amoxicilina?",SNS],["sis","Cardiopatia ou condição sistêmica relevante?",SN]];
+const EXM=[["pos","Posição do dente",["Normal","Extruído","Deslocado lateralmente","Intruído","Ausente (alvéolo vazio)"]],["mob","Mobilidade",["Normal","Aumentada","Ausente"]],["sul","Sangramento sulcular",SN],["per","Dor à percussão vertical",["Normal","Dolorosa"]],["som","Som à percussão",["Normal","Metálico","Surdo"]],["pal","Palpação do fundo de sulco e do ápice",["Normal","Dolorosa","Degrau ou ápice palpável"]],["blk","Dentes se movem em bloco",SN],["cor","Cor da coroa",["Normal","Rosada","Amarelada","Acinzentada"]],["frio","Teste ao frio",["Positivo","Negativo","Não realizado"]],["ele","Teste elétrico",["Positivo","Negativo","Não realizado"]],["pdl","Radiografia: espaço do ligamento periodontal",["Normal","Alargado","Estreito ou ausente","Alvéolo vazio"]],["apx","Formação radicular",["Ápice fechado","Ápice aberto"]],["fx","Fratura associada",["Não","Coroa","Raiz","Parede alveolar"]]];
+$("idf").innerHTML=IDF.map(([i,l,t])=>`<label>${l}<input id="${i}" type="${t||"text"}"></label>`).join("");
+$("data").value=new Date().toISOString().slice(0,10);
+$("ana").innerHTML=ANA.map(([k,q,o])=>`<div class="q"><span>${q}</span>${seg(k,o)}</div>`).join("");
+$("exm").innerHTML=EXM.map(([k,q,o])=>`<div class="q"><span>${q}</span>${seg(k,o)}</div>`).join("");
+$("tipo").innerHTML=seg("tipo",TIPOS);
+$("avq").innerHTML=`<div class="q"><span>O dente foi replantado no local antes do atendimento?</span>${seg("rep",SN)}</div><div class="q"><span>O dente estava contaminado (terra, areia)?</span>${seg("sujo",SN)}</div>`;
+const den=()=>{const t=S.cur??S.act;return t>=51&&t<=85?"Decídua":"Permanente"};
+const NM=["tipo","pos","mob","sul","per","som","pal","blk","cor","frio","ele","pdl","apx","fx","rep","sujo"],ID=["mm","tt","ts","med"];
+const snap=()=>{const o={};NM.forEach(n=>o[n]=get(n));ID.forEach(i=>o[i]=$(i).value);return o};
+const rest=o=>{NM.forEach(n=>document.querySelectorAll(`input[name="${n}"]`).forEach(i=>i.checked=i.value===o[n]));ID.forEach(i=>$(i).value=o[i]||"")};
+function buildOd(){const cx=280,cy=240;let h='<svg viewBox="0 0 560 480" role="group" aria-label="Odontograma"><line class="ln" x1="46" y1="240" x2="514" y2="240"/><line class="ln" x1="280" y1="26" x2="280" y2="454"/><text class="lb" x="280" y="12">Superior</text><text class="lb" x="280" y="476">Inferior</text><text class="lb" x="6" y="232" style="text-anchor:start">Direita</text><text class="lb" x="554" y="232" style="text-anchor:end">Esquerda</text>';
+const ring=(U,L,rx,ry,rf)=>[[U,-1],[L,1]].forEach(([a,s])=>a.forEach((t,i)=>{const th=Math.PI-Math.PI*(i+.5)/a.length,x=(cx+rx*Math.cos(th)).toFixed(1),y=(cy+s*ry*Math.sin(th)).toFixed(1);h+=`<g class="tg" data-t="${t}" tabindex="0" role="button" aria-label="Dente ${t}"><circle cx="${x}" cy="${y}" r="${rf(t%10)}"/><text x="${x}" y="${y}">${t}</text></g>`}));
+ring(PU,PL,205,195,u=>u>=6?17:u>=4?14.5:u==3?13.5:11.5);ring(DU,DL,130,118,u=>u>=4?14:u==3?12:11);$("od").innerHTML=h+"</svg>"}
+function pick(t){const first=S.act===null;if(!first)S.d[S.act]=snap();S.act=t;if(S.d[t])rest(S.d[t]);else if(first)S.d[t]=snap();else rest({});$("at").textContent=t;upd()}
+$("od").onclick=e=>{const g=e.target.closest(".tg");if(g)pick(+g.dataset.t)};
+$("od").onkeydown=e=>{const g=e.target.closest(".tg");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();pick(+g.dataset.t)}};
+function sumUp(){if(S.act!==null)S.d[S.act]=snap();const cur=snap(),ks=Object.keys(S.d).map(Number).sort((a,b)=>a-b);
+let h="<tr><th>Dente</th><th>Lesão</th><th>Frio</th><th>Elétrico</th><th>Percussão</th><th>Prognóstico</th></tr>";S.lv={};
+ks.forEach(t=>{S.cur=t;rest(S.d[t]);const r=calc(),d=S.d[t];S.lv[t]=r?r.lv:null;h+=`<tr><td><b>${t}</b></td><td>${r?r.dx:"–"}</td><td>${d.frio||"–"}</td><td>${d.ele||"–"}</td><td>${d.per||"–"}${d.som&&d.som!=="Normal"?", som "+d.som.toLowerCase():""}</td><td>${r?LV[r.lv]:"–"}</td></tr>`});
+S.cur=null;rest(cur);$("sum").innerHTML=h;$("sumw").hidden=!ks.length;
+document.querySelectorAll(".tg").forEach(g=>{const t=+g.dataset.t;g.setAttribute("class","tg"+(t>=51&&t<=85?" dc":"")+(S.d[t]?(S.lv[t]!=null?" l"+S.lv[t]:" dt"):"")+(S.act===t?" on":""))})}
+function tratamento(){const t=get("tipo");if(!t||den()==="Decídua")return"";
+const ap=get("apx"),ts=parseFloat($("ts").value),tt=parseFloat($("tt").value),dry=isNaN(ts)?(isNaN(tt)?null:tt):ts,f=ap==="Ápice fechado",ab=ap==="Ápice aberto",rep=get("rep")==="Sim";
+const C=x=>"<b>Cohen:</b> "+x,I=x=>"<b>IADT:</b> "+x,G=[];
+if(t==="Avulsão"){
+ G.push(["Atendimento de emergência",["Descartar antes de tudo lesão craniencefálica ou do sistema nervoso central.","Anamnese (quando, como e onde), avaliação do meio de armazenamento, irrigação suave do alvéolo com soro fisiológico e exame das paredes alveolares. Não tocar o alvéolo antes do reimplante.","Radiografias em três angulações verticais para excluir fratura radicular e lesões nos dentes adjacentes. Parede fraturada que impeça o reposicionamento pode ser reposicionada com instrumento rombo.",C("o reimplante deve ocorrer nos primeiros 15 a 20 min; sem isso, armazenar em leite, saliva, soro fisiológico ou água (o pior meio, por lise celular). A solução de Hanks mantém o ligamento por períodos longos.")]]);
+ if(!rep){const rows=[["Menos de 60 min, ápice fechado","remover resíduos com água ou soro e reimplantar suavemente.",dry<=60&&f],["Menos de 60 min, ápice aberto","remover detritos, imergir em doxiciclina por 5 min ou recobrir com minociclina em pó e reimplantar.",dry<=60&&ab],["Mais de 60 min, ápice fechado","remover o ligamento com ácido por 5 min, imergir em fluoreto estanhoso a 2% por 5 min e reimplantar.",dry>60&&f],["Mais de 60 min, ápice aberto","avaliar o reimplante; se feito, tratar como ápice fechado, com endodontia extraoral. Prognóstico muito ruim por risco de anquilose; a descoronação no momento oportuno preserva a altura e a largura do osso.",dry>60&&ab]],k=dry!==null&&ap!=="";
+  G.push(["Preparo da raiz"+(k?"":" (informe o tempo seco e o ápice para filtrar)"),(k?rows.filter(r=>r[2]):rows).map(r=>C("<i>"+r[0]+"</i>: "+r[1])).concat([I("menos de 60 min: remover o coágulo irrigando com soro e replantar; antibiótico tópico na raiz é opcional. Mais de 60 min: replantar, com prognóstico ruim e anquilose esperada; fluoreto é opcional.")])])}
+ G.push(["Contenção e terapia adjunta",[C("contenção semirrígida (fisiológica), que permita movimento, não agrida a gengiva e permita higiene, por 1 a 2 semanas; 4 a 8 semanas se houver fratura alveolar."),I("contenção flexível por 2 semanas; 4 semanas se houver fratura óssea marginal."),"Após instalar, fazer radiografia e checar a oclusão, evitando trauma oclusal. Suturar lacerações gengivais e limpar lacerações labiais de resíduos ou fragmentos.",C("antibiótico sistêmico da emergência até a remoção da contenção: doxiciclina 2 vezes ao dia por 7 dias, dose ajustada à idade e ao peso; para pacientes não indicados à tetraciclina, penicilina V. Clorexidina em bochecho por 7 a 10 dias."),"Encaminhar ao médico para reforço antitetânico, se necessário. Analgésicos conforme avaliação individual.",C("Ledermix ou corticoide no canal já na emergência mostrou benefício em estudos dos autores; ainda precisa ser replicado.")]])
+}else if(t==="Concussão"||t==="Subluxação"){
+ G.push(["Tratamento",[C("não há intervenção imediata. Registrar as respostas aos testes de vitalidade e acompanhar: a polpa pode ficar sem resposta por semanas ou meses."),I("concussão sem contenção; subluxação com contenção flexível por até 2 semanas apenas se houver desconforto ou mobilidade acentuada."),"Pequenas radiolucências em certas angulações não devem ser lidas como reabsorção progressiva. Se a polpa responde aos testes, não intervir."]])
+}else if(t==="Luxação extrusiva"||t==="Luxação lateral"){
+ G.push(["Reposicionamento e contenção",[C("reposicionar o mais breve possível. Na luxação lateral o ápice pode perfurar a lâmina óssea vestibular: desimpactar o dente suavemente antes."),C("imobilização fisiológica por 2 semanas na extrusão e 4 semanas na luxação lateral (mesmo prazo da IADT 2020)."),I("anestesia local, confirmação radiográfica da posição e sutura de lacerações gengivais.")]])
+}else{
+ G.push(["Reposicionamento e contenção",[C("dentes intruídos têm pouca probabilidade de reerupção, sobretudo com ápice incompleto: considerar extrusão ortodôntica em no máximo 2 a 3 semanas após o trauma ou reposicionamento cirúrgico imediato. Estudos em cães mostraram anquilose precoce mesmo com ortodontia iniciada em poucos dias."),C("dente intruído reimplantado imediatamente: contenção por pelo menos 4 semanas, muitas vezes mais."),I("ápice aberto: aguardar reerupção; ápice fechado: até 3 mm aguardar, de 3 a 7 mm reposicionar (cirúrgico ou ortodôntico) e acima de 7 mm reposicionar cirurgicamente.")]])}
+if(t!=="Concussão"&&t!=="Subluxação"){
+ G.push(["Infecção do espaço pulpar e endodontia",["A atenção à infecção pulpar deve ocorrer idealmente entre 7 e 10 dias após a lesão.",f||!ap?C("ápice fechado não revasculariza: endodontia em 7 a 10 dias, antes da infecção da polpa necrosada. Iniciar com preparo químico-mecânico e curativo de hidróxido de cálcio, obturando após a cicatrização periodontal (cerca de 1 mês), com lig. periodontal íntegro e lâmina dura visível. Trocar o curativo no máximo a cada 3 meses, pelo efeito necrosante sobre as células que repovoam a raiz."):null,ab||!ap?C("ápice aberto reposicionado em até 60 min: evitar endodontia e esperar a revascularização (a taxa pode dobrar ou triplicar com doxiciclina por 5 min ou minociclina na raiz antes do reimplante). Reavaliar a cada 3 ou 4 meses; ao primeiro sinal de infecção, desinfectar o canal e fazer apicificação. Com mais de 60 min, a revascularização é muito improvável e a apicificação começa na segunda sessão."):null,I("ápice aberto com necrose ou infecção: apicificação ou procedimento regenerativo. Hidróxido de cálcio como medicação intracanal."),C("tratamento iniciado após 10 dias ou com reabsorção inflamatória: controle microbiano e curativo de longa duração com hidróxido de cálcio (espíral Lentulo), retorno em cerca de 1 mês e radiografias a cada 3 meses. A cicatrização óssea adjacente indica o fim da reabsorção e o momento da obturação definitiva.")].filter(Boolean)])}
+if(t==="Avulsão")G.push(["Segunda consulta (1 a 2 semanas)",["Completar o antibiótico, interromper a clorexidina e remover a contenção.","Ápice fechado com menos de 60 min: iniciar a endodontia em 1 a 2 semanas, com hidróxido de cálcio de longo prazo se houver demora ou sinais de reabsorção."]]);
+G.push(["Reabsorções: o que esperar e como tratar",[C("<i>localizada</i> (concussão, subluxação): o cemento se repara em cerca de 14 dias, sem sintomas e sem tratamento."),C("<i>por substituição (anquilose)</i>: ocorre em danos difusos (mais de 20% da raiz), como intrusão ou avulsão com longo tempo extraoral. É irreversível; a raiz perde a lâmina dura e o espaço do ligamento. Monitorar com cuidado."),C("<i>inflamatória externa</i>: polpa necrosada e infectada (em geral na 3ª semana em dentes maduros) com radiolucidez progressiva na raiz e no osso. Tratar com hidróxido de cálcio; o retratamento do canal pode reverter."),C("<i>interna</i> (rara): alargamento oval do canal; tratar com endodontia, curativo de hidróxido de cálcio e obturação em segunda sessão com guta-percha aquecida. Sangramento persistente após a extirpação indica reabsorção externa.")]]);
+G.push(["Restauração e controle",[C("selamento coronário efetivo: provisório com no mínimo 4 mm (óxido de zinco e eugenol reforçado, resina com condicionamento ácido ou iônomero de vidro) sobre o hidróxido de cálcio, removido das paredes. Definitiva o quanto antes, evitando pinos e preferindo resina com adesivo dentinário nos anteriores."),C("testes de sensibilidade (frio e elétrico) em todos os dentes de canino a canino no exame inicial, repetidos em 3 semanas, 3, 6 e 12 meses e anualmente. Controle clínico e radiográfico aos 3 e 6 meses e anual por pelo menos 5 anos, incluindo dentes adjacentes."),I("os intervalos de retorno desta ficha seguem a IADT 2020 (veja Controles).")]]);
+return G.map(([h,a])=>`<h3>${h}</h3><ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`).join("")}
+function achados(){const a=[],som=get("som"),fr=get("frio"),el=get("ele"),pdl=get("pdl");
+if(som==="Metálico")a.push("Som metálico (anquilótico): raiz travada no osso, típico de intrusão ou luxação lateral, em geral sem mobilidade.");
+if(som==="Surdo")a.push("Som surdo ou abafado: líquido ou sangue no ligamento, típico de extrusão ou subluxação.");
+if(get("per")==="Dolorosa")a.push("Dor à percussão: dano ao ligamento periodontal (presente na concussão e na subluxação).");
+if(get("pal")==="Degrau ou ápice palpável")a.push("Degrau ou ápice palpável: suspeita de fratura da cortical, comum na luxação lateral com o ápice rompendo a lâmina vestibular.");
+if(get("blk")==="Sim")a.push("Vários dentes se movem juntos: suspeita de fratura do processo alveolar; confirmar na radiografia.");
+if(get("sul")==="Sim")a.push("Sangramento no sulco: ruptura de fibras periodontais (subluxação ou luxações).");
+if(fr==="Negativo"||el==="Negativo")a.push("Teste negativo logo após o trauma é frequente por choque neurovascular transitório e não confirma necrose. Registre como linha de base e repita em 3 semanas, 3, 6 e 12 meses e anualmente. Passagem de positivo para negativo sugere degeneração pulpar; de negativo para positivo, cicatrização.");
+if(fr==="Positivo"&&el==="Positivo")a.push("Resposta positiva não garante polpa saudável: mantenha o acompanhamento seriado.");
+if(get("cor")==="Acinzentada")a.push("Coroa acinzentada: sugere necrose pulpar; correlacionar com testes e radiografia.");
+if(get("cor")==="Rosada")a.push("Coroa rósea: hemorragia intrapulpar; pode evoluir para necrose ou reabsorção (diferenciar de reabsorção interna).");
+if(pdl==="Estreito ou ausente")a.push("Espaço do ligamento estreito ou ausente: compatível com intrusão; na substituição óssea a raiz perde a lâmina dura.");
+if(pdl==="Alargado")a.push("Espaço do ligamento alargado: compatível com extrusão, luxação lateral ou subluxação.");
+return a.length?a:["Preencha os achados do exame para ver a interpretação."]}
+$("sug").onclick=()=>{const p=get("pos"),m=get("mob"),pe=get("per");let t="";
+if(p.startsWith("Ausente"))t="Avulsão";else if(p==="Intruído")t="Luxação intrusiva";else if(p==="Extruído")t="Luxação extrusiva";else if(p.startsWith("Deslocado"))t="Luxação lateral";else if(p==="Normal"&&m==="Aumentada")t="Subluxação";else if(p==="Normal"&&m==="Normal"&&pe==="Dolorosa")t="Concussão";
+if(!t){$("smsg").textContent="Preencha posição, mobilidade e percussão para sugerir.";return}
+document.querySelector(`input[name="tipo"][value="${t}"]`).checked=true;$("smsg").textContent="Sugestão: "+t+". Confirme com o exame.";upd()};
+document.addEventListener("input",e=>{if(e.target.id!=="sug")upd()});
+$("pdf").onclick=()=>window.print();
+
+const FU={"Concussão":["4 semanas","1 ano"],"Subluxação":["2 semanas","12 semanas","6 meses","1 ano"],"Luxação extrusiva":["2 semanas","4 semanas","6 a 8 semanas","6 meses","1 ano","Anual por 5 anos"],"Luxação lateral":["2 semanas","4 semanas (remover contenção)","6 a 8 semanas","6 meses","1 ano","Anual por 5 anos"],"Luxação intrusiva":["2 semanas","4 semanas","6 a 8 semanas","6 meses","1 ano","Anual por 5 anos"],"Avulsão":["2 semanas (remover contenção e iniciar endodontia, se ápice fechado)","4 semanas","3 meses","6 meses","1 ano","Anual por 5 anos"]};
+function calc(){
+const t=get("tipo"),dec=den()==="Decídua",ap=get("apx")==="Ápice aberto"?"a":get("apx")==="Ápice fechado"?"f":"",fxo=get("fx")==="Parede alveolar";
+const mmv=parseFloat($("mm").value),ts=parseFloat($("ts").value),ttv=parseFloat($("tt").value),med=$("med").value,rep=get("rep")==="Sim",sujo=get("sujo")==="Sim";
+const tt=isNaN(ttv)?ts:ttv,idade=parseFloat($("idade").value);
+let pl=[],sp="Não indicada",rx=[],lv=0,rs=[],cp=[];
+const up=(n,x)=>{lv=Math.max(lv,n);rs.push(x)};
+const endoF="Ápice fechado: monitorar a sensibilidade pulpar; se houver necrose, iniciar tratamento endodôntico (hidróxido de cálcio como medicação intracanal).",
+endoA="Ápice aberto: monitorar a revascularização pulpar; só intervir diante de sinais de necrose, infecção ou reabsorção.",
+endoQ="Defina a formação radicular para orientar a conduta endodôntica.";
+const endo=ap==="f"?endoF:ap==="a"?endoA:endoQ;
+if(!t)return null;
+if(dec){
+ if(t==="Avulsão"){pl=["Não replantar dente decíduo: há risco de lesar o germe do permanente.","Controlar o sangramento e orientar os responsáveis."];up(1,"Dente decíduo: conduta preserva o germe permanente.");cp=["Alteração de desenvolvimento do permanente sucessor (avaliar em controle)."]}
+ else if(t==="Luxação intrusiva"){pl=["Radiografia para ver a relação da raiz com o germe permanente.","Raiz deslocada para vestibular: aguardar reerupção espontânea (algumas semanas).","Raiz deslocada em direção ao germe: extração, evitando empurrar o dente."];up(1,"Intrusão em decíduo pode afetar o germe permanente.");cp=["Alteração de esmalte ou erupção do permanente.","Necrose pulpar e infecção."]}
+ else if(t==="Concussão"||t==="Subluxação"){pl=["Sem tratamento ativo; observação e higiene cuidadosa.","Dieta pastosa por 1 a 2 semanas."];up(0,"Lesão leve em decíduo.");cp=["Alteração de cor da coroa; avaliar necrose em controle."]}
+ else{pl=["Extrusão ou luxação leve com dente ainda firme: reposicionar com cuidado ou aguardar.","Dente com muita mobilidade, risco de aspiração ou interferência oclusal: extração.","Avaliar sempre o germe do permanente."];up(1,"Luxação em decíduo: priorizar o germe permanente.");cp=["Necrose pulpar.","Alteração no permanente sucessor."]}
+ sp="Em geral não indicada em decíduos";rx=["Dieta pastosa e higiene com escova macia.","Se houver laceração, clorexidina 0,12% conforme orientação do profissional."];
+ return{dx:t+" (dentição decídua)",pl,sp,rx,lv,rs,cp,fu:["1 semana","6 a 8 semanas","1 ano (avaliar o permanente)"]}}
+switch(t){
+case"Concussão":pl=["Dente na posição normal, sem mobilidade, mas sensível à percussão.","Sem tratamento ativo; observação.","Dieta pastosa por 1 a 2 semanas e higiene cuidadosa.",endo];up(0,"Lesão sem deslocamento nem mobilidade.");cp=["Necrose pulpar tardia (rara; maior risco em ápice fechado)."];break;
+case"Subluxação":pl=["Dente com mobilidade aumentada, sem deslocamento.","Sem tratamento ativo na maioria dos casos.","Contenção flexível por até 2 semanas apenas se houver mobilidade acentuada ou desconforto.",endo];sp="Flexível por até 2 semanas, se necessária";up(0,"Mobilidade aumentada sem deslocamento.");cp=["Necrose pulpar (pouco frequente).","Obliteração do canal."];break;
+case"Luxação extrusiva":pl=["Reposicionar o dente suavemente com pressão digital, sob anestesia local.","Confirmar posição clínica e radiograficamente.","Contenção flexível por 2 semanas.",endo];sp="Flexível por 2 semanas";up(ap==="f"?1:0,ap==="f"?"Ápice fechado: necrose pulpar é frequente após extrusão.":"Ápice aberto: boa chance de revascularização.");if(fxo)up(1,"Fratura da parede alveolar associada.");cp=["Necrose pulpar.","Reabsorção radicular inflamatória.","Perda do osso marginal."];break;
+case"Luxação lateral":pl=["Anestesia local; reposicionar o dente com pressão digital, liberando-o do travamento ósseo.","Confirmar a posição clínica e radiograficamente; suturar lacerações gengivais.","Contenção flexível por 4 semanas.",ap==="f"?"Ápice fechado: necrose provável; iniciar endodontia (hidróxido de cálcio) conforme sensibilidade e radiografia.":endo];sp="Flexível por 4 semanas";up(1,"Luxação lateral envolve ruptura do ligamento e do feixe vásculo-nervoso.");if(ap==="f")up(1,"Ápice fechado: necrose pulpar provável.");if(fxo)up(1,"Fratura da parede alveolar associada: aumenta o risco de reabsorção.");cp=["Necrose pulpar.","Reabsorção inflamatória ou por substituição (anquilose).","Perda do osso marginal."];break;
+case"Luxação intrusiva":{const m=isNaN(mmv)?null:mmv;
+ if(ap==="a")pl=["Aguardar reerupção espontânea.","Sem movimento em 2 a 4 semanas: reposicionamento ortodôntico (ou cirúrgico)."];
+ else if(m===null)pl=["Informe a profundidade da intrusão (mm) para definir a conduta."];
+ else if(m<=3)pl=["Intrusão de até 3 mm: aguardar reerupção espontânea.","Sem movimento em 8 semanas: reposicionamento ortodôntico ou cirúrgico."];
+ else if(m<=7)pl=["Intrusão de 3 a 7 mm: reposicionamento cirúrgico ou ortodôntico."];
+ else pl=["Intrusão acima de 7 mm: reposicionamento cirúrgico."];
+ pl.push(ap==="f"?"Ápice fechado: necrose esperada; iniciar endodontia em 2 a 3 semanas com hidróxido de cálcio.":endo);
+ sp="Flexível por 4 semanas, se houver reposicionamento cirúrgico";up(1,"Intrusão causa o maior dano ao ligamento e ao cemento entre as luxações.");if(ap==="f")up(2,"Ápice fechado: necrose pulpar esperada.");if(m>7)up(2,"Intrusão acima de 7 mm: pior prognóstico.");if(fxo)up(2,"Fratura da parede alveolar associada.");cp=["Reabsorção inflamatória e por substituição (anquilose).","Necrose pulpar.","Perda óssea marginal."];break}
+case"Avulsão":{
+ const bom=["Leite","Soro fisiológico","Solução balanceada (HBSS)"].includes(med),dry=isNaN(ts)?(med==="Nenhum (seco)"&&!isNaN(tt)?tt:null):ts;
+ const fx2=fxo?"4 semanas (fratura da parede alveolar)":"2 semanas";
+ if(rep)pl=["Não remover o dente replantado.","Limpar a área com soro ou água; suturar lacerações gengivais.","Verificar a posição clínica e radiograficamente; corrigir sob anestesia, se necessário.","Contenção flexível por "+fx2+".",ap==="f"?"Iniciar endodontia 7 a 10 dias após o replante, antes de remover a contenção (hidróxido de cálcio).":endo];
+ else if(dry!==null&&dry>60)pl=["Replantação é possível, mas o ligamento periodontal está necrótico: anquilose é esperada.","Objetivo: manter estética e contorno ósseo; em paciente em crescimento, planejar decoronação posterior.","Remover o tecido necrótico, replantar com pressão digital e conferir a posição (radiografia).","Contenção flexível por 4 semanas.","Endodontia (pode ser feita fora do alvéolo antes do replante, ou 7 a 10 dias depois)."];
+ else pl=["Segurar o dente pela coroa e não tocar na raiz. Irrigar com soro fisiológico, sem raspar a raiz.","Anestesia local; irrigar o alvéolo com soro e remover o coágulo.","Replantar com pressão digital suave e conferir a posição (radiografia). Suturar lacerações.","Contenção flexível por "+fx2+".",ap==="f"?"Iniciar endodontia 7 a 10 dias após o replante, antes de remover a contenção (hidróxido de cálcio).":ap==="a"?"Ápice aberto: tentar a revascularização; intervir só diante de necrose, infecção ou reabsorção inflamatória.":endoQ];
+ sp="Flexível por "+(dry!==null&&dry>60?"4 semanas":fx2);
+ if(dry===null&&!rep)rs.push("Informe o tempo com o dente seco para estimar o prognóstico.");
+ if(rep&&tt<=15)up(0,"Replante imediato (até 15 min): melhor situação possível.");
+ else if(dry!==null){if(dry>60)up(2,"Dente seco por mais de 60 min: células do ligamento mortas; reabsorção por substituição esperada.");else if(dry>15)up(1,"Tempo seco entre 15 e 60 min: lesão parcial do ligamento.");else up(0,"Tempo seco curto (até 15 min).")}
+ if(!isNaN(tt)&&tt>60)up(1,"Mais de 60 min fora do alvéolo, mesmo em meio adequado, aumenta o risco.");
+ if(med==="Água")up(1,"Água é meio inadequado: hipotônica e lesiva às células do ligamento.");
+ if(bom)rs.push("Meio de armazenamento adequado ("+med.toLowerCase()+") preserva o ligamento.");
+ if(sujo)up(1,"Contaminação do dente aumenta o risco de reabsorção inflamatória.");
+ if(fxo)up(1,"Fratura da parede alveolar associada.");
+ cp=["Reabsorção radicular por substituição (anquilose) ou inflamatória.",ap==="f"?"Necrose pulpar esperada: endodontia indicada.":"Possível revascularização; se não ocorrer, necrose e parada do desenvolvimento radicular.","Infraoclusão em pacientes em crescimento, se houver anquilose."];break}}
+const abx=!isNaN(idade)&&idade<12?"amoxicilina ou penicilina V (crianças menores de 12 anos)":"doxiciclina (a partir de 12 anos) ou amoxicilina";
+const alg=get("alg")==="Sim";
+if(t==="Avulsão")rx.push("Antibiótico sistêmico recomendado: "+(alg?"alergia relatada: prescrever alternativa à penicilina.":abx+".")+" Posologia conforme prescrição do profissional.");
+else if(t==="Luxação lateral"||t==="Luxação intrusiva")rx.push("Considerar antibiótico sistêmico: "+(alg?"alergia relatada: alternativa à penicilina.":abx+".")+" Posologia conforme prescrição do profissional.");
+else rx.push("Antibiótico sistêmico não é rotina neste tipo de lesão.");
+if(get("tet")!=="Sim"&&(t==="Avulsão"||get("lac")==="Sim"||sujo))rx.push("Encaminhar ao médico para avaliar o reforço antitetânico.");
+if(get("sis")==="Sim")rx.push("Condição sistêmica relatada: avaliar com o médico antes de condutas invasivas e cobertura antibiótica.");
+rx.push("Clorexidina 0,12% sem álcool, 2 vezes ao dia por 1 semana.","Dieta pastosa por 2 semanas; escova macia; evitar morder com o dente e esportes de contato sem protetor bucal.","Retornar se houver dor, edema, fístula, mobilidade ou escurecimento do dente.");
+return{dx:t,pl,sp,rx,lv,rs,cp,fu:FU[t]}}
+const LV=["Favorável","Reservado","Desfavorável"];
+function upd(){sumUp();$("avs").hidden=get("tipo")!=="Avulsão";$("mmw").hidden=get("tipo")!=="Luxação intrusiva"||den()==="Decídua";
+const r=calc(),ts=S.act!==null?[S.act]:[];
+$("b1").textContent=get("tipo")||"–";$("b2").textContent=ts.length?ts.join(", "):"–";$("b3").textContent=get("apx")?get("apx").replace("Ápice ",""):"–";
+const al=get("mec")==="Sim"?'<div class="al">Sinais neurológicos relatados (perda de consciência, vômito, cefaleia forte ou amnésia): encaminhar para avaliação médica urgente antes ou junto da conduta odontológica.</div>':"";
+$("alert").innerHTML=al;
+if(!r){$("b4").textContent="–";$("kp").innerHTML="";$("or").innerHTML='<p class="hint">Escolha o tipo de lesão (ou use “Sugerir diagnóstico”) para ver a conduta e o prognóstico.</p>';return}
+$("b4").textContent=LV[r.lv];
+const L=a=>"<ul>"+a.map(x=>`<li>${x}</li>`).join("")+"</ul>";
+$("kp").innerHTML=[[r.dx,"Diagnóstico"],[ts.length?ts.join(", "):"Não informado","Dente(s)"],[r.sp.split(",")[0],"Contenção"],[LV[r.lv],"Prognóstico"]].map(([a,b])=>`<div class="kp"><b>${a}</b><span>${b}</span></div>`).join("");
+$("or").innerHTML=`<div class="og"><h3>Interpretação dos achados</h3>${L(achados())}<h3>Conduta recomendada</h3><ol>${r.pl.map(x=>`<li>${x}</li>`).join("")}</ol><p class="hint">Contenção: ${r.sp}.</p><h3>Medicação e cuidados</h3>${L(r.rx)}<h3>Controles</h3>${L(r.fu)}<h3>Prognóstico: <span class="badge c${r.lv}">${LV[r.lv]}</span></h3>${r.rs.length?L(r.rs):""}</div><div class="og w"><h3>Complicações possíveis</h3>${L(r.cp)}</div>`}
+buildOd();upd();
+</script>
+</body></html>
