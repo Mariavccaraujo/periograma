@@ -51,45 +51,57 @@ button:active{transform:scale(.97)}button.s{background:var(--as);color:var(--tx)
 .al{background:#ffd9de;color:#7a1226;border-radius:14px;padding:12px 16px;margin-bottom:12px;font-weight:500}
 .og h3{font:400 18px "DM Serif Display",Georgia,serif;margin:18px 0 4px}.og ul,.og ol{margin:0;padding-left:22px}.og li{margin:5px 0}
 .og.w h3{color:var(--bl)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.lk{display:inline-block;background:var(--btn);color:var(--btt);padding:11px 20px;border-radius:12px;font-weight:600;text-decoration:none}.lk:focus-visible,#mp a:focus-visible{outline:2px solid var(--pl);outline-offset:2px}
+.hero .lk{margin-top:16px}
+.fab{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:30;width:48px;height:48px;padding:0;border-radius:50%;font-size:20px;line-height:1;box-shadow:0 4px 14px rgba(0,0,0,.25)}#mn{left:16px}#up{right:16px}
+#mp{position:fixed;left:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 74px);z-index:30;display:flex;flex-direction:column;min-width:220px;padding:8px;background:var(--sf);border:1px solid var(--bd);border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+#mp a{padding:9px 12px;border-radius:10px;color:var(--tx);text-decoration:none;font-size:14px}#mp a:hover{background:var(--as)}#mp a.lk{margin-top:6px;text-align:center;color:var(--btt)}#mp a.lk:hover{background:var(--btn);opacity:.9}
+.obs{margin-top:20px;break-inside:avoid}.obs b{font-weight:600}.obs textarea{display:block;width:100%;min-height:128px;margin-top:6px;padding:0 14px;font:inherit;line-height:32px;color:var(--tx);border:1px solid var(--bd);border-radius:14px;resize:vertical;overflow:hidden;background:repeating-linear-gradient(transparent 0 31px,var(--bd) 31px 32px) local,var(--bg)}.obs textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--as);outline:0}
+.sg{display:none;gap:24px;flex-wrap:wrap;margin-top:44px}.sg div{flex:1 1 200px;border-top:1px solid var(--tx);padding-top:4px;font-size:12.5px;color:var(--mu);text-align:center}
 .od{max-width:560px;margin:8px auto}.od svg{width:100%;height:auto;display:block}
 .od .tg{cursor:pointer}.od .tg circle{fill:var(--bg);stroke:var(--mu);stroke-width:1.2}.od .tg text{fill:var(--tx);font:600 11px Inter,sans-serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}
 .od .tg.dc text{font-size:9.5px}.od .tg.dt circle{fill:var(--as)}.od .tg.l0 circle{fill:#b6e8c6}.od .tg.l1 circle{fill:#ffeaa6}.od .tg.l2 circle{fill:#ffb3bd}.od .tg.l0 text,.od .tg.l1 text,.od .tg.l2 text{fill:#0b3a5b}
 .od .tg.on circle,.od .tg:focus-visible circle{stroke:var(--pl);stroke-width:3.5}.od .tg:focus{outline:0}
 .od .ln{stroke:var(--bl);stroke-width:1;opacity:.6}.od .lb{fill:var(--mu);font:600 11px Inter,sans-serif;text-anchor:middle}
 .tb{overflow-x:auto;margin-top:12px}table{border-collapse:collapse;min-width:520px;width:100%;font-size:13px}td,th{border-bottom:1px solid var(--bd);padding:6px;text-align:left}th{background:var(--as)}
-@media print{body::before,.bar,button,.hero p{display:none!important}.hero{padding:10px;background:none}section{box-shadow:none;break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media print{.sg{display:flex}.fab,#mp,.hero .lk{display:none!important}body::before,.bar,button,.hero p{display:none!important}.hero{padding:10px;background:none}section{box-shadow:none;break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style></head><body>
-<div class="hero"><h1>Trauma Dental Virtual</h1><p>Diagnóstico, conduta e prognóstico de luxações (concussão, subluxação, extrusiva, lateral e intrusiva) e avulsão, com base nas diretrizes da IADT.</p></div>
+<div class="hero"><h1>Trauma Dental Virtual</h1><p>Diagnóstico, conduta e prognóstico de luxações (concussão, subluxação, extrusiva, lateral e intrusiva) e avulsão, com base nas diretrizes da IADT.</p><a class="lk" href="https://mariavccaraujo.github.io/periograma/periograma.html" target="_blank" rel="noopener">Acessar o periograma</a></div>
 <div class="bar"><div><b id="b1">–</b><span>Lesão</span></div><div><b id="b2">–</b><span>Dentes</span></div><div><b id="b3">–</b><span>Raiz</span></div><div><b id="b4">–</b><span>Prognóstico</span></div></div>
 <main>
-<section><h2><i>1</i>Identificação e trauma</h2><div class="g" id="idf"></div>
+<section id="s1"><h2><i>1</i>Identificação e trauma</h2><div class="g" id="idf"></div>
 </section>
 
-<section><h2><i>2</i>Anamnese do trauma</h2><div id="ana"></div></section>
+<section id="s2"><h2><i>2</i>Anamnese do trauma</h2><div id="ana"></div></section>
 
-<section><h2><i>3</i>Odontograma</h2>
+<section id="s3"><h2><i>3</i>Odontograma</h2>
 <p class="hint">Toque em um dente para abrir a ficha dele; cada dente guarda os próprios achados. Anel externo: permanentes. Anel interno: decíduos. A cor mostra o prognóstico dos dentes já preenchidos.</p>
 <div class="od" id="od"></div>
 <p class="hint" style="text-align:center"><span class="badge c0">Favorável</span> <span class="badge c1">Reservado</span> <span class="badge c2">Desfavorável</span> Azul: ficha iniciada, sem diagnóstico.</p>
 <div class="tb" id="sumw" hidden><table id="sum"></table></div></section>
 
-<section><h2><i>4</i>Ficha endodôntica do dente <span id="at">(selecione no odontograma)</span></h2>
+<section id="s4"><h2><i>4</i>Ficha endodôntica do dente <span id="at">(selecione no odontograma)</span></h2>
 <p class="hint">Logo após o trauma, os testes de sensibilidade podem dar falso-negativo. Registre-os como linha de base e repita em 3 semanas, 3, 6 e 12 meses e depois anualmente. Prefira neve de CO₂ ou diclorodifluorometano no terço médio da face vestibular.</p>
 <div id="exm"></div>
 <div id="mmw" class="q" hidden><b>Profundidade da intrusão (mm)</b><input id="mm" type="number" min="0" max="20" step="0.5" style="width:90px"></div></section>
 
-<section><h2><i>5</i>Diagnóstico</h2>
+<section id="s5"><h2><i>5</i>Diagnóstico</h2>
 <div class="q"><b>Tipo de lesão</b><div id="tipo"></div></div>
 <p style="margin:10px 0 0"><button class="s" id="sug" type="button">Sugerir diagnóstico a partir do exame</button> <span id="smsg" class="hint"></span></p></section>
 
 <section id="avs" hidden><h2><i>6</i>Dados da avulsão</h2><div id="avq"></div>
 <div class="g" style="margin-top:12px"><label>Tempo total fora do alvéolo (min)<input id="tt" type="number" min="0"></label><label>Tempo com o dente seco (min)<input id="ts" type="number" min="0"></label><label>Meio de armazenamento<select id="med"><option value="">Selecione</option><option>Nenhum (seco)</option><option>Saliva</option><option>Água</option><option>Leite</option><option>Soro fisiológico</option><option>Solução balanceada (HBSS)</option></select></label></div></section>
 
-<section><h2><i>✓</i>Resultados e orientações</h2>
+<section id="s7"><h2><i>✓</i>Resultados e orientações</h2>
 <div id="alert"></div><div class="k" id="kp"></div><div id="or"></div>
+<div class="obs"><b>Observações</b><textarea id="obs" rows="4" placeholder="Escreva aqui as observações do atendimento"></textarea><div class="sg"><div>Assinatura do operador</div><div>Assinatura do paciente ou responsável</div><div>Data</div></div></div>
 <p class="hint">Ferramenta de apoio didático baseada em Hargreaves e Berman (Cohen, 2017) e nas diretrizes da IADT (2020). Doses, prazos e condutas devem ser confirmados pelo profissional ou professor responsável.</p>
 <button id="pdf" type="button">Gerar ficha em PDF</button> <span class="hint">Na janela de impressão, escolha “Salvar como PDF”.</span></section>
 </main>
+<button id="mn" class="fab" type="button" aria-expanded="false" aria-controls="mp" aria-label="Abrir menu de seções">☰</button>
+<nav id="mp" aria-label="Seções" hidden><a href="#s1" data-s="s1">1 · Identificação</a><a href="#s2" data-s="s2">2 · Anamnese</a><a href="#s3" data-s="s3">3 · Odontograma</a><a href="#s4" data-s="s4">4 · Ficha endodôntica</a><a href="#s5" data-s="s5">5 · Diagnóstico</a><a href="#s7" data-s="s7">Resultados</a><a class="lk" href="https://mariavccaraujo.github.io/periograma/periograma.html" target="_blank" rel="noopener">Acessar o periograma</a></nav>
+<button id="up" class="fab" type="button" aria-label="Voltar ao topo" hidden>↑</button>
 <script>
 const $=id=>document.getElementById(id);
 const PU=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28],PL=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38],DU=[55,54,53,52,51,61,62,63,64,65],DL=[85,84,83,82,81,71,72,73,74,75];
@@ -231,6 +243,15 @@ $("b4").textContent=LV[r.lv];
 const L=a=>"<ul>"+a.map(x=>`<li>${x}</li>`).join("")+"</ul>";
 $("kp").innerHTML=[[r.dx,"Diagnóstico"],[ts.length?ts.join(", "):"Não informado","Dente(s)"],[r.sp.split(",")[0],"Contenção"],[LV[r.lv],"Prognóstico"]].map(([a,b])=>`<div class="kp"><b>${a}</b><span>${b}</span></div>`).join("");
 $("or").innerHTML=`<div class="og"><h3>Interpretação dos achados</h3>${L(achados())}<h3>Conduta recomendada</h3><ol>${r.pl.map(x=>`<li>${x}</li>`).join("")}</ol><p class="hint">Contenção: ${r.sp}.</p><h3>Medicação e cuidados</h3>${L(r.rx)}<h3>Controles</h3>${L(r.fu)}<h3>Prognóstico: <span class="badge c${r.lv}">${LV[r.lv]}</span></h3>${r.rs.length?L(r.rs):""}</div><div class="og w"><h3>Complicações possíveis</h3>${L(r.cp)}</div>`}
+$("obs").addEventListener("input",e=>{e.target.style.height="auto";e.target.style.height=Math.max(128,e.target.scrollHeight)+"px"});
+window.addEventListener("beforeprint",()=>{const o=$("obs");o.style.height="auto";o.style.height=Math.max(128,o.scrollHeight)+"px"});
+const bm=$("mn"),pn=$("mp"),bu=$("up"),cm=()=>{pn.hidden=true;bm.setAttribute("aria-expanded","false")};
+bm.onclick=()=>{pn.hidden=!pn.hidden;bm.setAttribute("aria-expanded",String(!pn.hidden))};
+pn.onclick=e=>{const a=e.target.closest("a[data-s]");if(a){e.preventDefault();$(a.dataset.s).scrollIntoView({behavior:"smooth"});cm()}};
+document.addEventListener("click",e=>{if(!pn.hidden&&!pn.contains(e.target)&&!bm.contains(e.target))cm()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")cm()});
+addEventListener("scroll",()=>{bu.hidden=scrollY<400},{passive:true});
+bu.onclick=()=>scrollTo({top:0,behavior:"smooth"});
 buildOd();upd();
 </script>
 </body></html>
